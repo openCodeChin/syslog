@@ -3,14 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.dbapp</groupId>
+        <artifactId>beijing-parent</artifactId>
+        <version>2.0.0</version>
     </parent>
     <groupId>com.cloudwise</groupId>
     <artifactId>syslog-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>syslog-spring-boot-starter</name>
     <packaging>jar</packaging>
     <description>syslog-spring-boot-starter</description>
@@ -98,5 +97,33 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>beijing-repository</id>
+            <name>beijing-repository</name>
+            <url>http://10.100.14.41:8081/repository/maven-public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>beijing-repository</id>
+            <name>beijing-repository</name>
+            <url>http://10.100.14.41:8081/repository/maven-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>beijing-repository</id>
+            <name>beijing-repository</name>
+            <url>http://10.100.14.41:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>beijing-repository</id>
+            <name>beijing-repository</name>
+            <url>http://10.100.14.41:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

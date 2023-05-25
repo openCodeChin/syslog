@@ -46,6 +46,7 @@ public class SyslogAutoconfig implements InitializingBean {
             log.info(">>>>>syslogProperties is null, skipped the configure of syslog");
             return;
         }
+        System.out.println(syslogProperties);
         List<SyslogProperties.SyslogConfig> serverList = syslogProperties.getServer();
         serverList = serverList.stream()
                 .filter(p -> StringUtils.hasText(p.getHandlerClass())).distinct()
