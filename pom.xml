@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.cloudwise</groupId>
     <artifactId>syslog-spring-boot-starter</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>syslog-spring-boot-starter</name>
     <packaging>jar</packaging>
     <description>syslog-spring-boot-starter</description>
@@ -29,17 +29,23 @@
             <scope>test</scope>
         </dependency>
         <!-- syslog 依赖 -->
+<!--        <dependency>-->
+<!--            <groupId>org.syslog4j</groupId>-->
+<!--            <artifactId>syslog4j</artifactId>-->
+<!--            <version>${syslog.version}</version>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>org.syslog4j</groupId>
+            <groupId>org.graylog2</groupId>
             <artifactId>syslog4j</artifactId>
-            <version>${syslog.version}</version>
+            <version>0.9.60</version>
         </dependency>
-        <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.20</version>
         </dependency>
+
     </dependencies>
 
     <build>

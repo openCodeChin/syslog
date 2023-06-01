@@ -52,4 +52,8 @@ public class SyslogProperties {
         Protocol protocol;
         String handlerClass;
     }
+
+    public List<SyslogConfig> getServer() {
+        return server;
+    }
 }

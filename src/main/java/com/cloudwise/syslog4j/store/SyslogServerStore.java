@@ -2,10 +2,11 @@ package com.cloudwise.syslog4j.store;
 
 
 
-import org.productivity.java.syslog4j.impl.net.tcp.TCPNetSyslogConfig;
-import org.productivity.java.syslog4j.impl.net.udp.UDPNetSyslogConfig;
-import org.productivity.java.syslog4j.server.SyslogServerConfigIF;
-import org.productivity.java.syslog4j.server.SyslogServerIF;
+
+import org.graylog2.syslog4j.impl.net.tcp.TCPNetSyslogConfig;
+import org.graylog2.syslog4j.impl.net.udp.UDPNetSyslogConfig;
+import org.graylog2.syslog4j.server.SyslogServerConfigIF;
+import org.graylog2.syslog4j.server.SyslogServerIF;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

@@ -5,13 +5,13 @@ import com.cloudwise.syslog4j.properties.SyslogProperties;
 import com.cloudwise.syslog4j.store.SyslogServerStore;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.productivity.java.syslog4j.SyslogRuntimeException;
-import org.productivity.java.syslog4j.server.SyslogServerConfigIF;
-import org.productivity.java.syslog4j.server.SyslogServerEventHandlerIF;
-import org.productivity.java.syslog4j.server.SyslogServerEventIF;
-import org.productivity.java.syslog4j.server.SyslogServerIF;
-import org.productivity.java.syslog4j.server.impl.net.tcp.TCPNetSyslogServerConfig;
-import org.productivity.java.syslog4j.server.impl.net.udp.UDPNetSyslogServerConfig;
+import org.graylog2.syslog4j.SyslogConstants;
+import org.graylog2.syslog4j.SyslogRuntimeException;
+import org.graylog2.syslog4j.server.SyslogServerConfigIF;
+import org.graylog2.syslog4j.server.SyslogServerEventHandlerIF;
+import org.graylog2.syslog4j.server.SyslogServerIF;
+import org.graylog2.syslog4j.server.impl.net.tcp.TCPNetSyslogServerConfig;
+import org.graylog2.syslog4j.server.impl.net.udp.UDPNetSyslogServerConfig;
 import org.springframework.context.ApplicationContext;
 
 import java.util.Arrays;
@@ -41,9 +41,10 @@ public class SyslogRunable implements Runnable {
                 break;
             case UDP:
             default:
-                config = new UDPNetSyslogServerConfig(host, port);
+                config = new UDPNetSyslogServerConfig(host, port, SyslogConstants.SYSLOG_BUFFER_SIZE * 10);
                 break;
         }
+
         return config;
     }
 

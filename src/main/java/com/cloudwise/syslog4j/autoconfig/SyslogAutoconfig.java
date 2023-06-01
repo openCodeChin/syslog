@@ -3,7 +3,7 @@ package com.cloudwise.syslog4j.autoconfig;
 import com.cloudwise.syslog4j.condition.OnAnnotationCondition;
 import com.cloudwise.syslog4j.properties.SyslogProperties;
 import com.cloudwise.syslog4j.runable.SyslogRunable;
-import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 @Configuration
 @EnableConfigurationProperties({SyslogProperties.class})
 //@Conditional({OnAnnotationCondition.class})
-@Log
+@Slf4j
 public class SyslogAutoconfig implements InitializingBean {
 
     @Autowired
